@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class MergeTwoSortedList {
@@ -15,7 +16,7 @@ public class MergeTwoSortedList {
 
     public static List<Integer> mergeTwoLists(List<Integer> list1, List<Integer> list2) {
 
-        return Stream.concat(list1.stream(), list2.stream()).sorted().toList();
+        return Stream.concat(list1.stream(), list2.stream()).sorted().collect(Collectors.toList());
 
     }
 
