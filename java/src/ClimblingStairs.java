@@ -1,4 +1,4 @@
-package com.example.leetCode;
+// package com.example.leetCode;
 
 public class ClimblingStairs {
 public static void main(String[] args) {

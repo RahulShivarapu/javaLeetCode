@@ -1,4 +1,3 @@
-package com.example.leetCode;
 
 // import java.util.LinkedList;
 import java.util.*;

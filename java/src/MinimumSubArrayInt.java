@@ -1,4 +1,3 @@
-package com.example.leetCode;
 
 public class MinimumSubArrayInt {
     public static void main(String[] args) {
