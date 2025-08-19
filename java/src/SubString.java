@@ -45,4 +45,34 @@ public class SubString {
         
     }
 
+public static String longestUniqueSubstring(String s) {
+        int left = 0, right = 0;
+        int maxLen = 0, startIndex = 0;
+
+        HashSet<Character> set = new HashSet<>();
+
+        while (right < s.length()) {
+            char c = s.charAt(right);
+
+            // If character already exists, move left until it's unique
+            while (set.contains(c)) {
+                set.remove(s.charAt(left));
+                left++;
+            }
+
+            set.add(c);
+
+            if (right - left + 1 > maxLen) {
+                maxLen = right - left + 1;
+                startIndex = left;
+            }
+
+            right++;
+        }
+
+        return s.substring(startIndex, startIndex + maxLen);
+    }
+
+
+
 }
